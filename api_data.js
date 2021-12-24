@@ -91,7 +91,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/find/id"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/find/id"
       }
     ]
   },
@@ -194,7 +194,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/find/password"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/find/password"
       }
     ]
   },
@@ -333,7 +333,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/login"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/login"
       }
     ]
   },
@@ -369,7 +369,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/logout"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/logout"
       }
     ]
   },
@@ -451,7 +451,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/modify/password"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/modify/password"
       }
     ]
   },
@@ -554,7 +554,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/refresh/token"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/refresh/token"
       }
     ]
   },
@@ -678,7 +678,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/signup"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/signup"
       }
     ]
   },
@@ -760,7 +760,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/validate/check/email"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/validate/check/email"
       }
     ]
   },
@@ -840,7 +840,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/validate/email"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/validate/email"
       }
     ]
   },
@@ -915,7 +915,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/validate/nickname"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/validate/nickname"
       }
     ]
   },
@@ -998,7 +998,7 @@ define({ "api": [
     "groupTitle": "Survey",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/survey/colors"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/survey/colors"
       }
     ]
   },
@@ -1108,7 +1108,7 @@ define({ "api": [
     "groupTitle": "Survey",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/survey/regist"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/survey/regist"
       }
     ]
   }
