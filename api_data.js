@@ -91,7 +91,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/find/id"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/find/id"
       }
     ]
   },
@@ -194,7 +194,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/find/password"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/find/password"
       }
     ]
   },
@@ -333,7 +333,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/login"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/login"
       }
     ]
   },
@@ -369,7 +369,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/logout"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/logout"
       }
     ]
   },
@@ -451,7 +451,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/modify/password"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/modify/password"
       }
     ]
   },
@@ -554,7 +554,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/refresh/token"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/refresh/token"
       }
     ]
   },
@@ -678,7 +678,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/signup"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/signup"
       }
     ]
   },
@@ -760,7 +760,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/validate/check/email"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/validate/check/email"
       }
     ]
   },
@@ -840,7 +840,7 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/validate/email"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/validate/email"
       }
     ]
   },
@@ -915,7 +915,200 @@ define({ "api": [
     "groupTitle": "Auth",
     "sampleRequest": [
       {
-        "url": "http://localhost:8000/v1/auth/validate/nickname"
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/validate/nickname"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/v1/auth/survey/colors",
+    "title": "01.GetColorList",
+    "name": "GetColorList",
+    "group": "Survey",
+    "description": "<p>색깔 리스트 조회</p>",
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "success",
+            "description": "<p>API 성공 여부</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>API 응답 코드</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>API 응답 메시지</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "Object[]",
+            "optional": false,
+            "field": "obj",
+            "description": "<p>색깔 정보를 담은 리스트 객체</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "obj.colorCode",
+            "description": "<p>색깔 코드</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "obj.colorHex",
+            "description": "<p>16진수 색상코드</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "obj.colorDesc",
+            "description": "<p>색깔명</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n    \"success\": true,\n    \"code\": \"SV002\",\n    \"message\": \"성공적으로 조회되었습니다.\",\n    \"obj\": [\n        {\n            \"colorCode\": \"C01\",\n            \"colorHex\": \"#FFF2DF\",\n            \"colorDesc\": \"크림\",\n        },\n        {\n            \"colorCode\": \"C02\",\n            \"colorHex\": \"#FFC8C8\",\n            \"colorDesc\": \"핑크\",\n        },\n        ...\n    ]\n}",
+          "type": "json"
+        },
+        {
+          "title": "False-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n    \"success\": false,\n    \"code\": \"SV005\",\n    \"message\": \"조회 결과가 없습니다.\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./auth/auth/src/main/java/com/fashion/celebrity/auth/controller/SurveyController.java",
+    "groupTitle": "Survey",
+    "sampleRequest": [
+      {
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/survey/colors"
+      }
+    ]
+  },
+  {
+    "type": "get",
+    "url": "/v1/auth/survey/regist",
+    "title": "02.Regist",
+    "name": "Regist",
+    "group": "Survey",
+    "description": "<p>설문결과 저장</p>",
+    "parameter": {
+      "fields": {
+        "Parameter": [
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "email",
+            "description": "<p>이메일 아이디</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "skinCode",
+            "description": "<p>피부톤 코드</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "height",
+            "description": "<p>키</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "int",
+            "optional": false,
+            "field": "weight",
+            "description": "<p>몸무게</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "colorCode1",
+            "description": "<p>선호 색깔 코드 1</p>"
+          },
+          {
+            "group": "Parameter",
+            "type": "String",
+            "optional": false,
+            "field": "colorCode2",
+            "description": "<p>선호 색깔 코드 2</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Request-Example:",
+          "content": "{\n    \"email\": \"asdf@naver.com\",\n    \"skinCode\": \"02\",\n    \"height\": 155,\n    \"weight\": 43,\n    \"colorCode1\": \"02\",\n    \"colorCode2\": \"11\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "success": {
+      "fields": {
+        "Success 200": [
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "success",
+            "description": "<p>API 성공 여부</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "code",
+            "description": "<p>API 응답 코드</p>"
+          },
+          {
+            "group": "Success 200",
+            "type": "String",
+            "optional": false,
+            "field": "message",
+            "description": "<p>API 응답 메시지</p>"
+          }
+        ]
+      },
+      "examples": [
+        {
+          "title": "Success-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n    \"success\": true,\n    \"code\": \"SV001\",\n    \"message\": \"성공적으로 등록되었습니다.\"\n}",
+          "type": "json"
+        },
+        {
+          "title": "False-Response:",
+          "content": "HTTP/1.1 200 OK\n{\n    \"success\": false,\n    \"code\": \"\",\n    \"message\": \"\"\n}",
+          "type": "json"
+        }
+      ]
+    },
+    "version": "0.0.0",
+    "filename": "./auth/auth/src/main/java/com/fashion/celebrity/auth/controller/SurveyController.java",
+    "groupTitle": "Survey",
+    "sampleRequest": [
+      {
+        "url": "https://celebrity-back.herokuapp.com/v1/auth/survey/regist"
       }
     ]
   },
